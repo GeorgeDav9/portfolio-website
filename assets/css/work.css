@@ -3510,7 +3510,7 @@
 				padding-bottom: 1px;
 			}
 
-			#navButton {
+			/* #navButton {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -3658,7 +3658,7 @@
 				transform: translateX(0);
 			}
 
-	}
+	} */
 
 /* Mobile */
 
