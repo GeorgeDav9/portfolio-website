@@ -3510,7 +3510,7 @@
 				padding-bottom: 1px;
 			}
 
-			/* #navButton {
+			#navButton {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -3656,7 +3656,7 @@
 				-webkit-transform: translateX(0);
 				-ms-transform: translateX(0);
 				transform: translateX(0);
-			} */
+			}
 
 	}
 
@@ -3899,34 +3899,3 @@
 			}
 
 	}
-	/* Effects */	  
-	  ul li a::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
-		transition: .5s;
-		transform: scale(.9);
-		z-index: -1;
-	  }
-	  
-	  ul li a:hover::before {
-		transform: scale(1.1);
-		box-shadow: 0 0 15px #5865d8;
-	  }
-	  
-	  ul li a:hover {
-		color: #5865d8;
-		box-shadow: 0 0 5px #5865d8;
-		text-shadow: 0 0 5px #5865d8;
-	  }
-
-	  i.grow {
-		transition: all .1s ease-in-out;
-	  }
-	  i:hover {
-		transform: scale(1.3);
-	  }
