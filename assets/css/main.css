@@ -108,7 +108,7 @@
 	}
 
 	body {
-		background: #f5f5f5;
+		background: black;
 	}
 
 	body, input, select, textarea {
@@ -3209,7 +3209,7 @@
 			#banner input[type="reset"]:hover,
 			#banner input[type="button"]:hover,
 			#banner .button:hover {
-				background-color: rgba(255, 255, 255, 0.1);
+				background-color: rgba(39, 33, 33, 0.1);
 			}
 
 			#banner input[type="submit"]:active,
@@ -3259,7 +3259,7 @@
 /* Footer */
 
 	#footer {
-		background: #f0f0f0;
+		background: black;
 		padding: 4em 0 6em 0;
 		text-align: center;
 	}
