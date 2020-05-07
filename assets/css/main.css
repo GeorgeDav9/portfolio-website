@@ -2332,6 +2332,10 @@
 			text-align: center;
 		}
 
+		#gif {
+			height: fit-content;
+		}
+
 		.box .image.featured {
 			border-radius: 0;
 			display: block;
