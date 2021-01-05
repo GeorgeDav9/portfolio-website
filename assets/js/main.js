@@ -1,84 +1,58 @@
-/*
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/*===== MENU SHOW =====*/ 
+const showMenu = (toggleId, navId) =>{
+    const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
 
-(function($) {
+    if(toggle && nav){
+        toggle.addEventListener('click', ()=>{
+            nav.classList.toggle('show')
+        })
+    }
+}
+showMenu('nav-toggle','nav-menu')
 
-	var	$window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$banner = $('#banner');
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');   
 
-	// Breakpoints.
-		breakpoints({
-			wide:      ( '1281px',  '1680px' ),
-			normal:    ( '981px',   '1280px' ),
-			narrow:    ( '737px',   '980px'  ),
-			narrower:  ( '737px',   '840px'  ),
-			mobile:    ( '481px',   '736px'  ),
-			mobilep:   ( null,      '480px'  )
-		});
+function linkAction(){
+  /*Active link*/
+  navLink.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+  
+  /*Remove menu mobile*/
+  const navMenu = document.getElementById('nav-menu')
+  navMenu.classList.remove('show')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+/*===== SCROLL REVEAL ANIMATION =====*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2000,
+    reset: true
+});
 
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			alignment: 'right'
-		});
+/* SCROLL HOME */
+sr.reveal('.home__title',{}); 
+sr.reveal('.button',{delay: 200}); 
+sr.reveal('.home__img',{delay: 400}); 
+sr.reveal('.home__social-icon',{ interval: 200}); 
 
-	// NavPanel.
+/* SCROLL ABOUT */
+sr.reveal('.about__img',{}); 
+sr.reveal('.about__subtitle',{delay: 400}); 
+sr.reveal('.about__text',{delay: 400}); 
 
-		// Button.
-			$(
-				'<div id="navButton">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
+/* SCROLL SKILLS */
+sr.reveal('.skills__subtitle',{}); 
+sr.reveal('.skills__text',{}); 
+sr.reveal('.skills__data',{interval: 200}); 
+sr.reveal('.skills__img',{delay: 600});
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+/* SCROLL WORK */
+sr.reveal('.work__img',{interval: 200}); 
 
-	// Header.
-		if (!browser.mobile
-		&&	$header.hasClass('alt')
-		&&	$banner.length > 0) {
+/* SCROLL CONTACT */
+sr.reveal('.contact__input',{interval: 200}); 
 
-			$window.on('load', function() {
-
-				$banner.scrollex({
-					bottom:		$header.outerHeight(),
-					terminate:	function() { $header.removeClass('alt'); },
-					enter:		function() { $header.addClass('alt reveal'); },
-					leave:		function() { $header.removeClass('alt'); }
-				});
-
-			});
-
-		}
-
-})(jQuery);
