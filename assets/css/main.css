@@ -365,6 +365,55 @@ img{
 	text-align: center;
   }
 
+  .button.alt {
+	background-color: rgb(92, 98, 114);
+	color: white;
+	font-weight: 400;
+	height: 3em;
+	line-height: 3em;
+	padding: 0 2em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#work > div > div:nth-child(5) > div > div > ul > li:nth-child(2) > a {
+	margin-top: 144px;
+    visibility: visible;
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.2s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.2s;
+    margin-left: 10px;
+    font-size: 12px;
+    height: 3em;
+}
+
+.work__buttonOne {
+	margin-right: 207px;
+	margin-top: 174px;
+	display: block;
+	color: white;
+	background-color: rgb(92, 98, 114);
+	border: none;
+	outline: none;
+	font-size: 11px;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.work__buttonTwo {
+	margin-top: -36px;
+	margin-right: 1px;
+	display: block;
+	color: white;
+	background-color: rgb(92, 98, 114);
+	border: none;
+	outline: none;
+	font-size: 11px;
+	cursor: pointer;
+	margin-left: auto;
+}
+
 /* ===== CONTACT =====*/
 .contact__input{
   width: 100%;
